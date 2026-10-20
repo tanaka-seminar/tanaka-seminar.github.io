@@ -140,33 +140,3 @@ if (heroSlides.length > 0) {
     }, 5000);
 
 }
-
-// ==========================
-// Intro Slider
-// ==========================
-
-const introSlides = document.querySelectorAll(".intro-slider .slide");
-
-if (introSlides.length > 0) {
-
-    let current = 0;
-
-    setInterval(() => {
-
-        const next = (current + 1) % introSlides.length;
-
-        introSlides[current].classList.add("prev");
-        introSlides[next].classList.add("active");
-
-        setTimeout(() => {
-
-            introSlides[current].classList.remove("active");
-            introSlides[current].classList.remove("prev");
-
-        }, 1000);
-
-        current = next;
-
-    }, 4000);
-
-}

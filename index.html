@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>田中ゼミ（田中法博ゼミナール）| 公立長野大学 企業情報学部</title>
     <meta name="description" content="公立長野大学 企業情報学部 田中法博ゼミナール。CV・CG・AIを軸に、地域や企業と連携しながら実社会で活用できるソフトウェア・アプリケーション開発に取り組む研究班の活動を紹介します。">
+    <meta name="theme-color" content="#0a1330">
     <link rel="icon" type="image/png" href="./LOGO/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- 背景の光・グリッド演出（全セクション共通の固定レイヤー） -->
+    <div class="bg-fx" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+        <div class="bg-fx-3d" id="bgfx3d"></div>
+    </div>
 
     <!-- Header -->
     <header class="header">
@@ -28,11 +37,9 @@
         <nav class="nav" id="nav">
             <ul>
                 <li><a href="#">TOP</a></li>
-                <li><a href="#">ゼミ紹介</a></li>
-                <li><a href="#">研究活動</a></li>
-                <li><a href="#">班紹介</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#about">ゼミ紹介</a></li>
+                <li><a href="#groups">研究班紹介</a></li>
+                <li><a href="#sns">SNS</a></li>
             </ul>
         </nav>
     </header>
@@ -44,17 +51,20 @@
             <div class="hero-bg-slide" style="background-image:url('./image/IMG_3444.JPG');"></div>
             <div class="hero-bg-slide" style="background-image:url('./image/IMG_3448.JPG');"></div>
         </div>
+        <div class="hero-3d" id="hero3d" aria-hidden="true"></div>
         <div class="hero-overlay">
+            <span class="hero-eyebrow">NAGANO UNIVERSITY SEMINAR</span>
             <h1>TANAKA SEMINAR</h1>
             <p>デジタル技術を用いて社会課題を解決する</p>
         </div>
+        <div class="scroll-cue">SCROLL</div>
     </section>
-    
-    <section class="about-wrapper">
+
+    <section class="about-wrapper" id="about">
 
         <section class="about fade">
 
-            <div class="about-images">
+            <div class="about-images hud-frame">
                 <img src="./image/ビジネス.JPG" alt="活動風景" class="img-top">
                 <img src="./image/IndieGames.jpg" alt="活動風景" class="img-bottom">
             </div>
@@ -79,7 +89,7 @@
 
     </section>
 
-    <section class="groups">
+    <section class="groups" id="groups">
 
         <div class="section-title fade">
             <span>RESEARCH GROUP</span>
@@ -133,7 +143,7 @@
             </div>
 
             <div class="card">
-                <div class="img-placeholder" style="--ph-a:#e0a836;--ph-b:#c48f22;">GRIMM GRAVITY班</div>
+                <div class="img-placeholder" style="--ph-a:#d9b26a;--ph-b:#182977;">GRIMM GRAVITY班</div>
                 <div class="card-content">
                     <h3>GRIMM GRAVITY班</h3>
                     <p>グリム童話をモチーフにした、重力操作型パズルゲームの開発を行っています。シンプルな操作で楽しめる一方、ギミックやステージ構成を工夫することで、奥深い思考型パズルとして遊べるゲームを目指しています。また、プレイヤー自身がオリジナルステージを作成・公開・共有できる機能の実装にも取り組み、長く楽しめるゲーム開発を進めています。</p>
@@ -157,7 +167,7 @@
             </div>
 
             <div class="card">
-                <div class="img-placeholder" style="--ph-a:#c48f22;--ph-b:#182977;">LMS班</div>
+                <div class="img-placeholder" style="--ph-a:#3f52ad;--ph-b:#0f1c54;">LMS班</div>
                 <div class="card-content">
                     <h3>LMS班</h3>
                     <p>説明文</p>
@@ -173,45 +183,43 @@
 
     </section>
 
-    <section class="news">
+    <section class="sns" id="sns">
 
-        <div class="news-left fade">
-            <h2>NEWS</h2>
+        <div class="sns-left fade">
+            <h2>SNS</h2>
         </div>
 
-        <div class="news-right">
+        <div class="sns-right">
 
-            <a href="#" class="news-card fade">
-                <div class="img-placeholder news-thumb" style="--ph-a:#182977;--ph-b:#4a5fb8;">NEWS</div>
-                <div class="news-text">
-                    <span>2026.06.30</span>
-                    <h3>地域イベントに参加しました</h3>
-                    <p>
-                        地域住民と交流しながらフィールドワークを実施しました。
-                    </p>
+            <p class="sns-lead fade">最新の活動報告はSNSで発信しています。ぜひフォローしてチェックしてください。</p>
+            <p class="sns-note fade">お問い合わせもSNSのDMからお気軽にどうぞ。</p>
+
+            <a href="https://www.instagram.com/nu.tanaka_lab?igsh=dTUzMGIzbmU2c2tq" target="_blank" rel="noopener" class="sns-card fade">
+                <div class="sns-icon" style="--ph-a:#d9b26a;--ph-b:#182977;">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="#fff" stroke-width="1.8"/>
+                        <circle cx="12" cy="12" r="4.5" stroke="#fff" stroke-width="1.8"/>
+                        <circle cx="17.2" cy="6.8" r="1.1" fill="#fff"/>
+                    </svg>
                 </div>
+                <div class="sns-text">
+                    <h3>Instagram</h3>
+                    <p>@nu.tanaka_lab</p>
+                </div>
+                <span class="sns-arrow">&#10095;</span>
             </a>
 
-            <a href="#" class="news-card fade">
-                <div class="img-placeholder news-thumb" style="--ph-a:#e0a836;--ph-b:#c48f22;">NEWS</div>
-                <div class="news-text">
-                    <span>2026.06.20</span>
-                    <h3>オープンキャンパス開催</h3>
-                    <p>
-                        高校生向けにゼミ活動を紹介しました。
-                    </p>
+            <a href="https://x.com/" target="_blank" rel="noopener" class="sns-card fade">
+                <div class="sns-icon" style="--ph-a:#3f52ad;--ph-b:#0f1c54;">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4L20 20M20 4L4 20" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
                 </div>
-            </a>
-
-            <a href="#" class="news-card fade">
-                <div class="img-placeholder news-thumb" style="--ph-a:#3348a0;--ph-b:#182977;">NEWS</div>
-                <div class="news-text">
-                    <span>2026.06.10</span>
-                    <h3>共同研究を開始</h3>
-                    <p>
-                        地域企業と連携した新しい研究が始まりました。
-                    </p>
+                <div class="sns-text">
+                    <h3>X (Twitter)</h3>
+                    <p>最新情報を配信中</p>
                 </div>
+                <span class="sns-arrow">&#10095;</span>
             </a>
 
         </div>
@@ -232,11 +240,9 @@
                 <h3>MENU</h3>
                 <ul>
                     <li><a href="#">TOP</a></li>
-                    <li><a href="#">ゼミ紹介</a></li>
-                    <li><a href="#">研究活動</a></li>
-                    <li><a href="#">班紹介</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#about">ゼミ紹介</a></li>
+                    <li><a href="#groups">研究班紹介</a></li>
+                    <li><a href="#sns">SNS</a></li>
                 </ul>
             </div>
 
@@ -268,6 +274,9 @@
 
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="bgfx3d.js"></script>
+    <script src="hero3d.js"></script>
     <script src="script.js"></script>
 
 </body>
